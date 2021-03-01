@@ -1,0 +1,56 @@
+.ball {
+  padding: 2.5rem;
+  background-color: #061627;
+  border-radius: 50%;
+  position: absolute;
+  top: -41px;
+  left: 82px;
+  width: 30%;
+  color: blue !important;
+}
+.content {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.footer > p {
+  font-size: 13px;
+}
+
+.header-title > p {
+  color: "#999" !important;
+  font-size: 13px !important;
+}
+.header-title > h4 {
+  font-size: 13px !important;
+}
+
+/* .footer > a{
+    color:'#fff'!important;
+    margin-bottom: 1rem;
+    padding: 1.2rem;
+    background-color:'#07b507'!important;
+    border-radius: 33px
+} */
+
+.work-progress {
+  display: flex;
+  justify-content: space-between;
+}
+.invest-link {
+  color: #fff;
+  margin-bottom: 1rem;
+  padding: 1.2rem;
+  background-color: #07b507;
+  border-radius: 33px;
+}
+
+/* MOBILE VIEW */
+@media only screen and (max-width: 480px) {
+  .cont .ball {
+    padding: 2rem;
+    width: 15px;
+  }
+  .invest-link {
+    padding: 0.7rem;
+  }
+}
