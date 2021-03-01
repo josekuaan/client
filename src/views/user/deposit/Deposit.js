@@ -118,7 +118,7 @@ const Deposit = () => {
         <CCol xs="12">
           <CFade timeout={300} in={showElements} unmountOnExit={true}>
             <CCard>
-              <CCardHeader>Form Elements</CCardHeader>
+              <CCardHeader><h3>Deposit Funds</h3></CCardHeader>
               <CCollapse show={collapsed} timeout={1000}>
                 <CCardBody>
                   <CForm
@@ -128,7 +128,7 @@ const Deposit = () => {
                     <CRow>
                       <CCol xs="12">
                         <CFormGroup>
-                          <CLabel htmlFor="selectSm">Select Small</CLabel>
+                        <CLabel htmlFor="selectSm">Transaction Type</CLabel>
                           <CSelect
                             custom
                             size="md"

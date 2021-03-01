@@ -29,10 +29,9 @@ class App extends Component {
   render() {
     return (
       <Router>
-        
+        <React.Suspense fallback={loading}>
           <DataProvider>
             <Switch>
-            <Route path="/" name="Home" render={props => <TheLayout {...props}/>} />
               <Route
                 exact
                 path="/login"
@@ -81,6 +80,7 @@ class App extends Component {
               />
             </Switch>
           </DataProvider>
+        </React.Suspense>
       </Router>
     );
   }
