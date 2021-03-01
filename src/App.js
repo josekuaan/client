@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import "./scss/style.scss";
 import { DataProvider } from "./pageContext";
 
@@ -28,13 +28,14 @@ const Page500 = React.lazy(() => import("./views/pages/page500/Page500"));
 class App extends Component {
   render() {
     return (
-      <Router>
+      <HashRouter>
         <React.Suspense fallback={loading}>
           <DataProvider>
             <Switch>
+              <Route path="/" name="Home" />
               <Route
                 exact
-                path="/"
+                path="/login"
                 name="Login Page"
                 render={(props) => <Login {...props} />}
               />
@@ -81,7 +82,7 @@ class App extends Component {
             </Switch>
           </DataProvider>
         </React.Suspense>
-      </Router>
+      </HashRouter>
     );
   }
 }
