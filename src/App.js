@@ -33,6 +33,7 @@ class App extends Component {
           <DataProvider>
             <Switch>
               <Route
+                exact
                 path="/"
                 name="Home"
                 render={(props) => <TheLayout {...props} />}
