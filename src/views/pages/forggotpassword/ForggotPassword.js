@@ -42,7 +42,7 @@ const ForgotPassword = () => {
     console.log(data);
     axios
       .post(
-        "http://localhost:50001/api/user/auth/forgot-password",
+        "https://limitless-escarpment-58685.herokuapp.com/api/user/auth/forgot-password",
         data,
         config
       )
