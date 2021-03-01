@@ -32,7 +32,7 @@ class App extends Component {
         <React.Suspense fallback={loading}>
           <DataProvider>
             <Switch>
-              <Route path="/" name="Home" />
+              {/* <Route path="/" name="Home" /> */}
               <Route
                 exact
                 path="/login"
