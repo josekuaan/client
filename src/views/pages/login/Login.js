@@ -4,7 +4,7 @@ import { Formik } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
 import Cookies from "js-cookie";
-import { Link } from "react-router-dom";
+import { Link,Redirect } from "react-router-dom";
 import isLoggedIn from "../../../helper";
 import "../../style.css";
 
@@ -97,7 +97,7 @@ const Login = () => {
   };
 
   if (isLoggedIn) {
-    return history.goBack();
+    return <Redirect to="/user-dashboard" />
   }
 
   return (
