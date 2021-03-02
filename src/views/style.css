@@ -394,6 +394,27 @@ center img {
 }
 /* instant payment ends */
 
+/* whatsapp widget */
+.whatsapp_float {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 40px;
+  right: 14px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 22px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.whatsapp-icon {
+  margin-top: 16px;
+}
+/* whatsapp widget ends*/
+
 /* MOBILE VIEW */
 @media only screen and (max-width: 480px) {
   .card-body .deposit {
@@ -440,4 +461,19 @@ center img {
   display: none !important;
   margin-left: 1rem !important;
 }
+}
+
+/* whatsapp widget for mobible */
+@media screen and (max-width: 767px) {
+  .whatsapp-icon {
+      margin-top: 10px;
+  }
+
+  .whatsapp_float {
+      width: 40px;
+      height: 40px;
+      bottom: 20px;
+      right: 3px;
+      font-size: 22px;
+  }
 }

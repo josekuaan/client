@@ -52,7 +52,7 @@ export default function Invest() {
                 <hr />
                 <p>Tenure: 10 Day(s)</p>
                 <hr />
-                <Link to=".." className="invest-link">
+                <Link to="https://wa.link/j7z95l" className="invest-link">
                   Invest Now
                 </Link>
               </div>
@@ -105,7 +105,7 @@ export default function Invest() {
                 <hr />
                 <p>Tenure: 10 Day(s)</p>
                 <hr />
-                <Link to=".." className="invest-link">
+                <Link to="https://wa.link/j7z95l" className="invest-link">
                   Invest Now
                 </Link>
               </div>
@@ -158,7 +158,7 @@ export default function Invest() {
                 <hr />
                 <p>Tenure: 10 Day(s)</p>
                 <hr />
-                <Link to=".." className="invest-link">
+                <Link to="https://wa.link/j7z95l" className="invest-link">
                   Invest Now
                 </Link>
               </div>
@@ -211,7 +211,7 @@ export default function Invest() {
                 <hr />
                 <p>Tenure: 10 Day(s)</p>
                 <hr />
-                <Link to=".." className="invest-link">
+                <Link to="https://wa.link/j7z95l" className="invest-link">
                   Invest Now
                 </Link>
               </div>

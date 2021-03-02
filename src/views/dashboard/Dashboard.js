@@ -99,7 +99,7 @@ console.log(EditAccount)
                 <div className="row">
                     <div className="col-md-6" style={{ marginTop: '12px'}}>
                         <div className="card">
-                            <h5 style={{padding:"20px 10px 0px"}}><small>TOTAL ROI</small></h5>
+                            <h5 style={{padding:"20px 10px 0px"}}><small>PROFIT</small></h5>
                             <div className="card-header roi">
                                 <div className="">
                                     <Link to="..." className="interest" style={{ color: '#fff'}}>{EditAccount.length == 0 || EditAccount === undefined? <span>$0.00</span>:<span>${EditAccount[0].interest}</span>}</Link>
@@ -137,7 +137,7 @@ console.log(EditAccount)
                     <div className="row">
                     <div className="col-md-6" >
                         <div className="card">
-                            <h5 style={{padding:"20px 10px 0px"}}><small>WALLET BALANCE</small></h5>
+                            <h5 style={{padding:"20px 10px 0px"}}><small>DEPOSIT BALANCE</small></h5>
                             <div className="card-header roi">
                                 <div className="">     
                                     
@@ -150,7 +150,7 @@ console.log(EditAccount)
                       </div>
                       <div className="col-md-6" >
                         <div className="card">
-                            <h5 style={{padding:"20px 10px 0px"}}><small>TOTAL WITHDRAWAL</small></h5>
+                            <h5 style={{padding:"20px 10px 0px"}}><small>BALANCE</small></h5>
                             <div className="card-header roi">
                                 <div className="">
                                 <div  className="withdraw"><small><i className="fa fa-long-arrow-alt-down"></i></small> {EditAccount === undefined || EditAccount.length === 0 ? <span>$0.00</span>: <span>${EditAccount[0].withdrawable}</span>}
@@ -164,6 +164,14 @@ console.log(EditAccount)
                       </div>
                 </div>
             </div>
+            <a
+                href="https://wa.me/+447862205606"
+                class="whatsapp_float"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa fa-whatsapp whatsapp-icon"></i>
+              </a>
         </div>
         </>
       )
