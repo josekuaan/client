@@ -146,10 +146,10 @@ const Deposit = () => {
                     <CRow>
                       <CCol xs="12">
                         <CFormGroup>
-                          <CLabel htmlFor="ccnumber">Credit Card Number</CLabel>
+                          <CLabel htmlFor="ccnumber">Deposit Amount</CLabel>
                           <CInput
                             id="ccnumber"
-                            placeholder="0000 0000 0000 0000"
+                            placeholder="0000"
                             required
                             min="100"
                             onChange={(e) => setAountInvested(e.target.value)}
