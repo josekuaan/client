@@ -1,47 +1,38 @@
 import React, { Component } from "react";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./scss/style.scss";
 import { DataProvider } from "./pageContext";
 
-const loading = (
-  <div className="pt-3 text-center">
-    <div className="sk-spinner sk-spinner-pulse"></div>
-  </div>
-);
 
-// Containers
-const TheAdminLayout = React.lazy(() => import("./containers/TheAdminLayout"));
-const TheLayout = React.lazy(() => import("./containers/TheLayout"));
+import Layout from "./Layout"
+import Login from "./views/pages/login/Login"
+import ResetPassword from "./views/pages/resetpassword/ResetPassword"
+import Register from "./views/pages/register/Register"
+import ForggottenPage from "./views/pages/forggotpassword/ForggotPassword"
+import Page500 from "./views/pages/page500/Page500"
+import Page404 from "./views/pages/page404/Page404"
 
-// Pages
-const Login = React.lazy(() => import("./views/pages/login/Login"));
-const ResetPassword = React.lazy(() =>
-  import("./views/pages/resetpassword/ResetPassword")
-);
-const ForggottenPage = React.lazy(() =>
-  import("./views/pages/forggotpassword/ForggotPassword")
-);
-const Register = React.lazy(() => import("./views/pages/register/Register"));
-const Page404 = React.lazy(() => import("./views/pages/page404/Page404"));
-const Page500 = React.lazy(() => import("./views/pages/page500/Page500"));
+// const loading = (
+//   <div className="pt-3 text-center">
+//     <div className="sk-spinner sk-spinner-pulse"></div>
+//   </div>
+// );
+
 
 class App extends Component {
+
+  constructor(props){
+    super(props)  
+  
+}
   render() {
     return (
-      <HashRouter>
-        <React.Suspense fallback={loading}>
+      <>
+
+      <BrowserRouter>
           <DataProvider>
             <Switch>
-            <Route
-                path="/user/dashboard"
-                name="Dashboard"
-                render={(props) => <TheLayout {...props} />}
-              />
-               <Route
-                path="/admin/dashboard"
-                name="Admin"
-                render={(props) => <TheAdminLayout {...props} />}
-              />
+            
               <Route
                 exact
                 path="/login"
@@ -78,11 +69,11 @@ class App extends Component {
                 name="Page 500"
                 render={(props) => <Page500 {...props} />}
               />
-              
+              <Route path='/' render={(props) => <Layout {...props} /> } />
             </Switch>
           </DataProvider>
-        </React.Suspense>
-      </HashRouter>
+      </BrowserRouter>
+      </>
     );
   }
 }

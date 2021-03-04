@@ -27,7 +27,7 @@ import CIcon from "@coreui/icons-react";
 
 const Login = () => {
   const history = useHistory();
- 
+
   const [err, setError] = useState("");
   const [isLoading, setLoading] = useState(false);
   const resettoken = history.location.pathname.split("/")[4];
@@ -54,7 +54,6 @@ const Login = () => {
         console.log(response);
         if (response.data.success) {
           return history.push("/login");
-          
         }
         if (isLoading) {
           setTimeout(() => {
@@ -79,7 +78,6 @@ const Login = () => {
   return (
     <div className="c-app c-default-layout flex-row align-items-center">
       <CContainer>
-
         <CRow className="justify-content-center">
           <CCol md="8">
             <CCardGroup>
@@ -103,7 +101,7 @@ const Login = () => {
                       password: Yup.string()
                         .min(6, "Password must be at least 6 characters")
                         .required("Password is required"),
-                        confirmPassword: Yup.string()
+                      confirmPassword: Yup.string()
                         .oneOf(
                           [Yup.ref("password"), null],
                           "Passwords must match"
@@ -164,36 +162,36 @@ const Login = () => {
                             )}
                           </CInputGroup>
                           <CInputGroup className="mb-3">
-                          <CInputGroupPrepend>
-                            <CInputGroupText>
-                              <CIcon name="cil-lock-locked" />
-                            </CInputGroupText>
-                          </CInputGroupPrepend>
-                          <CInput
-                            type="password"
-                            placeholder="Repeat password"
-                            autoComplete="new-password"
-                            name="confirmPassword"
-                            value={values.confirmPassword}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            onReset={handleReset}
-                            className={
-                              errors.confirmPassword && touched.confirmPassword
-                                ? "form-control error"
-                                : "form-control"
-                            }
-                          />
-                          {errors.confirmPassword && touched.confirmPassword && (
-                            <div
-                              className="input-feedback"
-                              style={{ color: "red" }}
-                            >
-                              {errors.confirmPassword}
-                            </div>
-                          )}
-                        </CInputGroup>
-                           
+                            <CInputGroupPrepend>
+                              <CInputGroupText>
+                                <CIcon name="cil-lock-locked" />
+                              </CInputGroupText>
+                            </CInputGroupPrepend>
+                            <CInput
+                              type="password"
+                              placeholder="Repeat password"
+                              autoComplete="new-password"
+                              name="confirmPassword"
+                              value={values.confirmPassword}
+                              onChange={handleChange}
+                              onBlur={handleBlur}
+                              onReset={handleReset}
+                              className={
+                                errors.confirmPassword &&
+                                touched.confirmPassword
+                                  ? "form-control error"
+                                  : "form-control"
+                              }
+                            />
+                            {errors.confirmPassword && touched.confirmPassword && (
+                              <div
+                                className="input-feedback"
+                                style={{ color: "red" }}
+                              >
+                                {errors.confirmPassword}
+                              </div>
+                            )}
+                          </CInputGroup>
                         </CForm>
                       );
                     }}
@@ -203,9 +201,7 @@ const Login = () => {
               <CCard
                 className="text-white bg-primary py-5 d-md-down-none"
                 style={{ width: "44%" }}
-              >
-               
-              </CCard>
+              ></CCard>
             </CCardGroup>
           </CCol>
         </CRow>

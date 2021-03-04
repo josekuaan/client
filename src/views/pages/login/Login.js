@@ -4,7 +4,7 @@ import { Formik } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
 import Cookies from "js-cookie";
-import { Link,Redirect } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import isLoggedIn from "../../../helper";
 import "../../style.css";
 
@@ -59,7 +59,10 @@ const Login = () => {
           window.localStorage.setItem("loggedIn", true);
           Cookies.set("token", response.data.token);
 
-          if (response.data.user.role === "user" &&  response.data.user.status === false) {
+          if (
+            response.data.user.role === "user" &&
+            response.data.user.status === false
+          ) {
             console.log(true);
             return history.push("/user/dashboard/user-credentials");
           }
@@ -67,7 +70,7 @@ const Login = () => {
             return history.push("/admin/dashboard");
           } else if (response.data.user.role === "user") {
             return history.push("/user/dashboard");
-          } 
+          }
         } else if (!response.data.success) {
           setError(response.data.msg);
         } else if (rememberMe === true) {
@@ -97,7 +100,7 @@ const Login = () => {
   };
 
   if (isLoggedIn) {
-    return <Redirect to="/user-dashboard" />
+    return <Redirect to="/user/dashboard" />;
   }
 
   return (

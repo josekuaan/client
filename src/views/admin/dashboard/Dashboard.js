@@ -3,7 +3,7 @@ import React, { useEffect, useContext } from "react";
 import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
 import { WalletContext } from "../../../pageContext";
-import happy from '../../../assets/icons/happiness.svg'
+import happy from "../../../assets/icons/happiness.svg";
 import "../../style.css";
 
 const Dashboard = () => {
@@ -50,7 +50,7 @@ const Dashboard = () => {
         <div
           style={{
             height: 560,
-            backgroundColor: "#FFFFFF",
+            backgroundColor: 'darkgray',
             overflow: "hidden",
             boxSizing: "border-box",
             border: "1px solid #56667F",
@@ -76,7 +76,7 @@ const Dashboard = () => {
               marginHeight={0}
               frameBorder={0}
               border={0}
-              style={{ border: 0, margin: 0, padding: 0, lineHeight: 14 }}
+              style={{ border: 0, margin: 0, padding: 0, lineHeight: 14, }}
               alt="widget"
             />
           </div>
@@ -104,7 +104,7 @@ const Dashboard = () => {
             >
               ©
             </Link>
-            &nbsp;E-Capital Option
+            &nbsp;Rilibit Option
           </div>
         </div>
 
@@ -114,7 +114,11 @@ const Dashboard = () => {
               <div className="card-header">
                 <div className="greet-user col-12 col-xl-10">
                   <div style={{ margin: "auto", width: "75%" }}>
-                  <img src={happy} alt="happiness" className="img-fluid  mb-2" />
+                    <img
+                      src={happy}
+                      alt="happiness"
+                      className="img-fluid  mb-2"
+                    />
                   </div>
                   {currentuser.map((user, index) => (
                     <h2 className="fs-23 font-weight-600 mb-2">
@@ -122,9 +126,9 @@ const Dashboard = () => {
                     </h2>
                   ))}
                   <p className="text-muted">
-                    Welcome to E-Capital Option, We hope you enjoy using
-                    E-Capital Option. Please ensure you refer members to
-                    E-Capital Option as this can earn you more bonus
+                    Welcome to Rilibit Option, We hope you enjoy using Rilibit
+                    Option. Please ensure you refer members to Rilibit Option as
+                    this can earn you more bonus
                   </p>
                   {currentuser.length == 0 ? (
                     <Link
@@ -169,7 +173,7 @@ const Dashboard = () => {
               <div className="col-md-6" style={{ marginTop: "12px" }}>
                 <div className="card">
                   <h5 style={{ padding: "20px 10px 0px" }}>
-                    <small>TOTAL ROI</small>
+                    <small>PROFIT</small>
                   </h5>
                   <div className="card-header roi">
                     <div className="">
@@ -244,7 +248,7 @@ const Dashboard = () => {
               <div className="col-md-6">
                 <div className="card">
                   <h5 style={{ padding: "20px 10px 0px" }}>
-                    <small>WALLET BALANCE</small>
+                    <small>DEPOSIT BALANCE</small>
                   </h5>
                   <div className="card-header roi">
                     <div className="">
@@ -270,7 +274,7 @@ const Dashboard = () => {
               <div className="col-md-6">
                 <div className="card">
                   <h5 style={{ padding: "20px 10px 0px" }}>
-                    <small>TOTAL WITHDRAWAL</small>
+                    <small>BALANCE</small>
                   </h5>
                   <div className="card-header roi">
                     <div className="">
